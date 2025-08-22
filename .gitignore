@@ -1,4 +1,5 @@
 
-#python
+# python
 
 .venv/
+__pycache__/
