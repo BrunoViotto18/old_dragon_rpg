@@ -1,6 +1,7 @@
 from typing import override
+
+from commom.providers.random_provider import RandomProvider
 from .base_dice import BaseDice
-from providers.random_provider import RandomProvider
 
 
 class NormalDice(BaseDice):
