@@ -1,12 +1,14 @@
 from typing import override
+from models.attributes.attributes import Attributes
 from models.attributes.builders.attribute_builder import AttributeBuilder
 from models.attributes.builders.classic_attribute_builder import ClassicAttributeBuilder
 from views.base_view import BaseView
 
 
-class ClassicAttributeView(BaseView):
+class ClassicAttributeView(BaseView[Attributes]):
 
     def __init__(self):
+        super().__init__()
         self.builder: AttributeBuilder = ClassicAttributeBuilder()
 
 
@@ -23,5 +25,6 @@ class ClassicAttributeView(BaseView):
             .with_charisma(values[5])
 
         attributes = self.builder.build()
+        self._output = attributes
 
         print(f'Atributos: {attributes}')

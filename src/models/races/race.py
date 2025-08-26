@@ -6,6 +6,12 @@ class Race(ABC):
 
     @property
     @abstractmethod
+    def name(self) -> str:
+        pass
+
+
+    @property
+    @abstractmethod
     def movement(self) -> int:
         pass
 
@@ -16,5 +22,5 @@ class Race(ABC):
 
     @property
     @abstractmethod
-    def alignment(self) -> None:
+    def alignment(self) -> str:
         pass

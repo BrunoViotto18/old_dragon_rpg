@@ -5,6 +5,11 @@ class RpgClass(ABC):
 
     @property
     @abstractmethod
+    def name(self) -> str:
+        pass
+
+    @property
+    @abstractmethod
     def weapons(self) -> list[str]:
         pass
 

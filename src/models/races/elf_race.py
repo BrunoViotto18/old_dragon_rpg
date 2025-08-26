@@ -7,6 +7,12 @@ class ElfRace(Race):
 
     @property
     @override
+    def name(self) -> str:
+        return 'Elfo'
+
+
+    @property
+    @override
     def movement(self) -> int:
         return 9
 
@@ -19,5 +25,5 @@ class ElfRace(Race):
 
     @property
     @override
-    def alignment(self) -> None:
-        raise NotImplementedError()
+    def alignment(self) -> str:
+        return 'Neutro'

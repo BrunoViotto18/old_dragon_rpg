@@ -1,10 +1,11 @@
 
 from typing import override
+from models.attributes.attributes import Attributes
 from models.attributes.builders.attribute_builder import AttributeBuilder
 from views.base_view import BaseView
 
 
-class BaseAttributeView(BaseView):
+class BaseAttributeView(BaseView[Attributes]):
 
     def __init__(self, attribute_builder: AttributeBuilder):
         super().__init__()
@@ -38,6 +39,7 @@ class BaseAttributeView(BaseView):
         self._console_helper.clear_console()
 
         attributes = self._attribute_builder.build()
+        self._output = attributes
 
         print(f'Atributos: {attributes}')
 

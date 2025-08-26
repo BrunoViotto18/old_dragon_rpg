@@ -1,9 +1,13 @@
 
+from typing import TypeVar
 from views.view import View
 
 
-class MenuOption:
+T = TypeVar('T')
 
-    def __init__(self, title: str, view: View):
+
+class MenuOption[T]:
+
+    def __init__(self, title: str, view: View[T]):
         self.title = title
         self.view = view

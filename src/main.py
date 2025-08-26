@@ -1,9 +1,8 @@
-from views.menus.attribute_menu import AttributeMenu
+from views.create_character_view import CreateCharacterView
 
 
 def main():
-    view = AttributeMenu()
-
+    view = CreateCharacterView()
     view.show()
 
 

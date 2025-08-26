@@ -1,11 +1,18 @@
 
 from abc import abstractmethod
-from typing import override
+from typing import TypeVar, override
 from views.base_view import BaseView
 from views.menus.menu_option import MenuOption
 
 
-class MenuView(BaseView):
+T = TypeVar('T')
+
+
+class MenuView(BaseView[T]):
+
+    def __init__(self):
+        super().__init__()
+
 
     @override
     def on_show(self):
@@ -24,8 +31,9 @@ class MenuView(BaseView):
         menu_option = options[option - 1]
 
         menu_option.view.show()
+        self._output = menu_option.view.get_output()
 
 
     @abstractmethod
-    def get_options(self) -> list[MenuOption]:
+    def get_options(self) -> list[MenuOption[T]]:
         pass

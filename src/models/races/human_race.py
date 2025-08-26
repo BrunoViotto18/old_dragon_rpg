@@ -7,6 +7,12 @@ class HumanRace(Race):
 
     @property
     @override
+    def name(self) -> str:
+        return 'Humano'
+
+
+    @property
+    @override
     def movement(self) -> int:
         return 9
 
@@ -19,5 +25,5 @@ class HumanRace(Race):
 
     @property
     @override
-    def alignment(self) -> None:
-        raise NotImplementedError()
+    def alignment(self) -> str:
+        return 'Qualquer'

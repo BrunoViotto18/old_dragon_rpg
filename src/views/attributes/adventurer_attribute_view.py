@@ -1,5 +1,5 @@
 from models.attributes.builders.adventurer_attribute_builder import AdventurerAttributeBuilder
-from views.base_attribute_view import BaseAttributeView
+from .base_attribute_view import BaseAttributeView
 
 
 class AdventurerAttributeView(BaseAttributeView):
