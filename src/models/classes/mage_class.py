@@ -13,6 +13,18 @@ class MageClass(RpgClass):
 
     @property
     @override
+    def health(self) -> int:
+        return 4
+
+
+    @property
+    @override
+    def attack(self) -> int:
+        return 0
+
+
+    @property
+    @override
     def weapons(self) -> list[str]:
         return ['Armas pequenas', 'Armas cortantes', 'Armas perfurantes']
 

@@ -27,3 +27,9 @@ class HumanRace(Race):
     @override
     def alignment(self) -> str:
         return 'Qualquer'
+
+
+    @property
+    @override
+    def skills(self) -> list[str]:
+        return ['Aprendizado', 'Adaptabilidade']

@@ -26,3 +26,9 @@ class HalflingRace(Race):
     @override
     def alignment(self) -> str:
         return 'Neutro'
+
+
+    @property
+    @override
+    def skills(self) -> list[str]:
+        return ['Furtivo', 'Destemido', 'Bons de Mira', 'Pequenos', 'Restrições']

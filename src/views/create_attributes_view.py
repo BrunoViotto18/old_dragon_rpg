@@ -19,5 +19,5 @@ class CreateAttributesView(MenuView[Attributes]):
         return [
             MenuOption('Clássico', ClassicAttributeView()),
             MenuOption('Aventureiro', AdventurerAttributeView()),
-            MenuOption('Aventureiro', HeroicAttributeView())
+            MenuOption('Heróico', HeroicAttributeView())
         ]

@@ -10,6 +10,16 @@ class RpgClass(ABC):
 
     @property
     @abstractmethod
+    def health(self) -> int:
+        pass
+
+    @property
+    @abstractmethod
+    def attack(self) -> int:
+        pass
+
+    @property
+    @abstractmethod
     def weapons(self) -> list[str]:
         pass
 

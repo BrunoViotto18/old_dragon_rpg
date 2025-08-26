@@ -7,6 +7,8 @@ class Character:
 
     def __init__(self, name: str, attributes: Attributes, race: Race, rpg_class: RpgClass):
         self._name = name
+        self._hp = rpg_class.health
+
         self._attributes = attributes
         self._race = race
         self._rpg_class = rpg_class
@@ -15,6 +17,11 @@ class Character:
     @property
     def name(self) -> str:
         return self._name
+
+
+    @property
+    def hp(self) -> int:
+        return self._hp
 
 
     @property

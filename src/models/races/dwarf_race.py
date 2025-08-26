@@ -26,3 +26,9 @@ class DwarfRace(Race):
     @override
     def alignment(self) -> str:
         return 'Ordem'
+
+
+    @property
+    @override
+    def skills(self) -> list[str]:
+        return ['Mineradores', 'Vigoroso', 'Armas Grandes', 'Inimigos']

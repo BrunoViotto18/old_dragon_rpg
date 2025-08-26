@@ -13,6 +13,18 @@ class WarriorClass(RpgClass):
 
     @property
     @override
+    def health(self) -> int:
+        return 10
+
+
+    @property
+    @override
+    def attack(self) -> int:
+        return 1
+
+
+    @property
+    @override
     def weapons(self) -> list[str]:
         return ['Todas']
 

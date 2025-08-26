@@ -27,3 +27,9 @@ class ElfRace(Race):
     @override
     def alignment(self) -> str:
         return 'Neutro'
+
+
+    @property
+    @override
+    def skills(self) -> list[str]:
+        return ['Percepção Natural', 'Graciosos', 'Treinamento Racial', 'Imunidades']

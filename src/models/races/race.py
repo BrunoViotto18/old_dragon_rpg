@@ -24,3 +24,8 @@ class Race(ABC):
     @abstractmethod
     def alignment(self) -> str:
         pass
+
+    @property
+    @abstractmethod
+    def skills(self) -> list[str]:
+        pass

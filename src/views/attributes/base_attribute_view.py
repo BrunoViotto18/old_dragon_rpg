@@ -45,22 +45,22 @@ class BaseAttributeView(BaseView[Attributes]):
 
 
     def _choose_value(self, labels: list[str], values: list[int]) -> tuple[str, int]:
-        print('Valores disponíveis')
-        for index, label in enumerate(values):
-            print(f'[ {index + 1} ] {label}')
+        print(f'Valores disponíveis: {values}')
+        value = int(input('Selecione um valor: '))
 
-        value_index = int(input('Selecione um dos valores para ser atribuido: ')) - 1
+        if (value not in values):
+            raise NotImplementedError()
 
         self._console_helper.clear_console()
 
 
-        print('Atributos disponíveis')
+        print('Atributos')
         for index, label in enumerate(labels):
             print(f'[ {index + 1} ] {label}')
 
-        label_index = int(input(f'Selecione o atributo para o valor {values[value_index]}: ')) - 1
+        label_index = int(input(f'Selecione o atributo para o valor {value}: ')) - 1
 
         self._console_helper.clear_console()
 
 
-        return labels[label_index], values[value_index]
+        return labels[label_index], value

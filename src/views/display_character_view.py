@@ -12,9 +12,12 @@ class DisplayCharacterView(BaseView[None]):
 
     @override
     def on_show(self):
+        print(f'# Personagem')
         print(f'Nome: {self._character.name}')
-
+        print(f'HP: {self._character.hp}/{self._character.rpg_class.health}')
+        print(f'Ataque: {self._character.rpg_class.attack}')
         print()
+
         print(f'# Atributos')
         print(f'Força: {self._character.attributes.power}')
         print(f'Destreza: {self._character.attributes.dexterity}')
@@ -22,19 +25,22 @@ class DisplayCharacterView(BaseView[None]):
         print(f'Inteligência: {self._character.attributes.intelligence}')
         print(f'Sabedoria: {self._character.attributes.wisdom}')
         print(f'Carisma: {self._character.attributes.charisma}')
-
-
         print()
+
+
         print(f'# Raça')
         print(f'Nome: {self._character.race.name}')
         print(f'Movimento: {self._character.race.movement}m')
-        print(f'Infrvisão: {self._character.race.infravision}m')
+        print(f'Infravisão: {self._character.race.infravision}m')
         print(f'Alinhamento: {self._character.race.alignment}')
-
-
+        print(f'Habilidades: {self._character.race.skills}')
         print()
+
+
         print(f'# Classe')
         print(f'Nome: {self._character.rpg_class.name}')
         print(f'Armas: {self._character.rpg_class.weapons}')
         print(f'Armaduras: {self._character.rpg_class.armors}')
         print(f'Itens mágicos: {self._character.rpg_class.magic_items}')
+        print(f'Habilidades: {self._character.rpg_class.get_skills()}')
+        print()
