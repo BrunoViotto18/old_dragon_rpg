@@ -1,4 +1,3 @@
-
 from typing import override
 from models.characters.character import Character
 from views.create_attributes_view import CreateAttributesView
@@ -6,6 +5,7 @@ from views.base_view import BaseView
 from views.create_class_view import CreateClassView
 from views.create_race_view import CreateRaceView
 from views.display_character_view import DisplayCharacterView
+from views.save_character_view import SaveCharacterView
 
 
 class CreateCharacterView(BaseView[Character]):
@@ -41,3 +41,6 @@ class CreateCharacterView(BaseView[Character]):
 
         display_character_view = DisplayCharacterView(character)
         display_character_view.show()
+
+        save_character_view = SaveCharacterView(character)
+        save_character_view.show()
